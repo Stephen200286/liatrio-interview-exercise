@@ -10,7 +10,7 @@ RUN go mod download
 #RUN go get github.com/gofiber/fiber/v2
 
 COPY server.go .
-EXPOSE 3000
+EXPOSE 80
 
 RUN go build -o server 
 

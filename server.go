@@ -25,7 +25,7 @@ func main() {
 		return c.JSON(newJsonTest("My name is Stephen"))
 	})
 
-	app.Listen(":3000")
+	app.Listen(":80")
 }
 
 
