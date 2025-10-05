@@ -1,4 +1,7 @@
-- Is RFC3339 an acceptable format for the timestamp?
-- Does "minified" just mean striped of whitespace chars?
-- Does "timestamp should be dynamically generated" mean that it should be updated every second? Or does it just mean that it can't be a hardcoded value?
+GolangApp:
+    - Is RFC3339 an acceptable format for the timestamp?
+    - Does "minified" just mean striped of whitespace chars?
+    - Does "timestamp should be dynamically generated" mean that it should be updated every second? Or does it just mean that it can't be a hardcoded value?
+    - Provide a screenshot of the JSON loaded in Firefox and ask if it looks right.
+
 
