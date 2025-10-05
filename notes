@@ -4,4 +4,17 @@ GolangApp:
     - Does "timestamp should be dynamically generated" mean that it should be updated every second? Or does it just mean that it can't be a hardcoded value?
     - Provide a screenshot of the JSON loaded in Firefox and ask if it looks right.
 
-
+Dockerfile:
+    Commands used:
+        - docker build -t golang-app .
+        - sudo docker run -d -p 3000:3000 golang-app
+    Misc commands:
+        - docker ps (-a) list running/all containers
+        - docker stop <container-ID>
+    Commands for build env, don't do this:
+        - docker build -t golang-app .
+        - sudo docker create --name golang-app-container golang-app
+        - sudo docker cp golang-app-container:/app/server .
+        - sudo docker rm golang-app-container
+    Questions:
+        - 
