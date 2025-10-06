@@ -17,6 +17,7 @@ jobs:
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     container: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
     steps:
