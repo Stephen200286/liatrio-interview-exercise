@@ -20,5 +20,6 @@ jobs:
         uses: addnab/docker-run-action@v3
         with:
           image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
+          options: -p 80:80
       - name: Run Tests
         uses: liatrio/github-actions/apprentice-action@master
