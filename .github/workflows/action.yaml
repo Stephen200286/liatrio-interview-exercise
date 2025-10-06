@@ -17,4 +17,5 @@ jobs:
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
       - name: Run tests
+        container: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
         uses: liatrio/github-actions/apprentice-action@master
