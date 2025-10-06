@@ -16,10 +16,9 @@ jobs:
         with:
           push: true
           tags: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
-  test:
-    needs: [build]
-    runs-on: ubuntu-latest
-    container: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
-    steps:
-      - name: Run tests
+      - name: Start Container
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
+      - name: Run Tests
         uses: liatrio/github-actions/apprentice-action@master
