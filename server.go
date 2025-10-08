@@ -16,7 +16,7 @@ func newJsonTest(message string) *jsonTest {
     j := jsonTest{Message: message}
     // https://stackoverflow.com/questions/32015364/timestamps-in-golang
     //j.Timestamp = time.Now().Format(time.RFC3339)
-    j.Timestamp = time.Now().Unix()
+    j.Timestamp = time.Now().UnixMilli()
     return &j
 }
 
