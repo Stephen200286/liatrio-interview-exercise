@@ -3,9 +3,16 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    services:
+      json:
+        image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
+        ports:
+        - 80:80
     steps:
     - name: run tests
       uses: liatrio/github-actions/apprentice-action@master
+
+#https://stackoverflow.com/questions/75460950/github-actions-run-jobs-in-webserver-container-unable-to-connect-to-localhost
 #jobs:
 #  build:
 #    runs-on: ubuntu-latest
