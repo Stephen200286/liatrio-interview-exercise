@@ -8,14 +8,15 @@ import (
 
 type jsonTest struct {
     Message string `json:"message"`
-    Timestamp string `json:"timestamp"`
+    Timestamp int64 `json:"timestamp"`
 }
 
 // https://gobyexample.com/structs
 func newJsonTest(message string) *jsonTest {
     j := jsonTest{Message: message}
     // https://stackoverflow.com/questions/32015364/timestamps-in-golang
-    j.Timestamp = time.Now().Format(time.RFC3339)
+    //j.Timestamp = time.Now().Format(time.RFC3339)
+    j.Timestamp = time.Now().Unix()
     return &j
 }
 
@@ -27,5 +28,3 @@ func main() {
 
 	app.Listen(":80")
 }
-
-
