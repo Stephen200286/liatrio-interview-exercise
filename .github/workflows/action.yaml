@@ -20,6 +20,7 @@ jobs:
           tags: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
   test:
     runs-on: ubuntu-latest
+    needs: build
     services:
       json:
         image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
