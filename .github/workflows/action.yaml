@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       json:
-        image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
+        image: ${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.9 # hardcoded for testing
         ports:
         - 80:80
     steps:
