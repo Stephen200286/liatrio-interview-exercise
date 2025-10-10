@@ -28,5 +28,5 @@ jobs:
         - 80:80
     steps:
       - name: Run Tests
-        uses: liatrio/github-actions/apprentice-action@0b41561
+        uses: liatrio/github-actions/apprentice-action@0b41561cca6822cc8d880fe0e49e7807a41fdf91
 
