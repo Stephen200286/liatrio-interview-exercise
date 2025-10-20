@@ -45,5 +45,10 @@ jobs:
           workload_identity_provider: projects/892806361271/locations/global/workloadIdentityPools/github/providers/liatrio-interview-exercise
       - name: Set up GCP SDK
         uses: google-github-actions/setup-gcloud@v3
+      - name: Configure kubectl
+        uses: google-github-actions/get-gke-credentials@v3
+        with:
+          cluster_name: hello-cluster
+          location: us-central1
       - name: Deploy
         run: kubectl set image deployment/hello-server hello-server=${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
