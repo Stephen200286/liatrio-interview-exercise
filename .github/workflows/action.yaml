@@ -51,4 +51,4 @@ jobs:
           cluster_name: hello-cluster
           location: us-central1
       - name: Deploy
-        run: kubectl set image deployment/hello-server hello-server=${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
+        run: kubectl set image deployment/hello-server go-app=${{ vars.DOCKERHUB_USERNAME }}/go-app:1.0.${{ github.run_number }}
